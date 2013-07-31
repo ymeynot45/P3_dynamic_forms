@@ -19,12 +19,12 @@ $(document).ready(function() {
 
     $(".todo_list").on("click", ".complete", function(event){
       event.preventDefault();
-      $(this).parent().parent().siblings().css("text-decoration", "line-through").css("color", "red");
+      $(this).parents('ul').siblings('h2').css("text-decoration", "line-through").css("color", "red");
     });
 
       $(".todo_list").on("click", '.delete', function(event){
       event.preventDefault();
-      $(this).parent().parent().parent().remove();
+      $(this).parents('.todo').remove();
       // $(this).parents().eq(2).remove();
     });
 
