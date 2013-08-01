@@ -19,13 +19,13 @@ $(document).ready(function() {
 
     $(".todo_list").on("click", ".complete", function(event){
       event.preventDefault();
-      $(this).parents('ul').siblings('h2').css("text-decoration", "line-through").css("color", "red");
+      $(this).parents('ul').siblings('h2').css({"text-decoration": "line-through", "color": "red"});
     });
 
       $(".todo_list").on("click", '.delete', function(event){
       event.preventDefault();
       $(this).parents('.todo').remove();
-      // $(this).parents().eq(2).remove();
+      // $(this).parents().eq(2).remove(); #found lots of examples like this but could never get it to work.
     });
 
   };
